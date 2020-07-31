@@ -14,10 +14,16 @@ async function main(){
         .version('v0.1')
         .option("create","Project Create")
         .option("-p --project [value]","Project Name")
+        .option("-c --controller [value]","Controller Name")
         .parse(process.arqv)
         
     let project
+
     try{
+        if (Commander.controller){
+            return await utils.createController(Commander.controller)
+        }
+        
         if(Commander.project){
             project = new Project(Commander)
         }

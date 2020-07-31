@@ -1,6 +1,0 @@
-#! /usr/bin/env node
-
-// var { exec } = require("child_process");
-
-require('./ominix')
-// exec("node ./ominix.js");

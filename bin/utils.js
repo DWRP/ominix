@@ -21,7 +21,6 @@
 const { resolve, basename } = require('path')  
 const axios = require('axios')
 const extract = require('extract-zip')
-//https://github.com/DWRP/ominix-model/archive/master.zip
 
 const wfAsync = promisify(writeFile)
 const exAsync = promisify(exists)
@@ -40,6 +39,12 @@ class Utils{
         }
         return true
     }
+
+    async createController(name){
+        await wfAsync(resolve(process.cwd(),"src","controllers",name,'index.ts'))
+        return true
+    }
+
     async downloadFiles(pathFile="my_project"){
         const url = 'https://github.com/DWRP/ominix-model/archive/master.zip'
         const path = resolve(process.cwd(), pathFile,'master.zip')
