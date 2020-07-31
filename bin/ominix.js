@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 const Commander = require('commander')
 const { exec } = require('child_process');
 const { promisify } = require('util')
