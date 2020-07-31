@@ -1,0 +1,21 @@
+{
+  "name": "ominix",
+  "version": "1.0.0",
+  "description": "A mini-framework to express generic server",
+  "repository": "https://github.com/DWRP/ominix",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./tests/test.js"
+  },
+  "keywords": [
+    "framework",
+    "express",
+    "ominix",
+    "oministack"
+  ],
+  "author": "Douglas Walas Rodrigues Pardim",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^8.0.1"
+  }
+}
