@@ -1,13 +1,15 @@
 {
   "name": "ominix",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A mini-framework to express generic server",
   "repository": {
     "type": "GIT",
     "url":"https://github.com/DWRP/ominix"
   },
   "main": "index.js",
-  "bin": {"ominix":"./index.js"},
+  "bin": {
+    "ominix":"bin/cli"
+  },
   "scripts": {
     "create": "node .",
     "test": "mocha ./tests/test.js"
