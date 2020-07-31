@@ -1,6 +1,6 @@
 {
   "name": "ominix",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "A mini-framework to express generic server",
   "repository": {
     "type": "GIT",

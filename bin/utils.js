@@ -41,7 +41,12 @@ class Utils{
     }
 
     async createController(name){
-        await wfAsync(resolve(process.cwd(),"src","controllers",name,'index.ts'))
+        const model = require('./models/controllers')
+
+        if(!(await exAsync(resolve(process.cwd(),"src","controllers",name)))){
+            await mkAsync(resolve(process.cwd(),"src","controllers",name))
+        }
+        await wfAsync(resolve(process.cwd(),"src","controllers",name,'index.ts'),model(name))
         return true
     }
 
